@@ -1,0 +1,875 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D6DB3A71E1ED737007EAD73 /* ConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6DB3A61E1ED737007EAD73 /* ConnectionCheck.swift */; };
+		2D6DB3AB1E1ED972007EAD73 /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6DB3AA1E1ED972007EAD73 /* VideoDetail.swift */; };
+		2D6DB3AE1E1EE2AB007EAD73 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6DB3AC1E1EE2AB007EAD73 /* CustomTableViewCell.swift */; };
+		2D6DB3AF1E1EE2AB007EAD73 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6DB3AD1E1EE2AB007EAD73 /* CustomTableViewCell.xib */; };
+		2D6E5A131E224DAC007B38E8 /* MyVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E5A121E224DAC007B38E8 /* MyVideo.swift */; };
+		2D6E5A171E225062007B38E8 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E5A151E225062007B38E8 /* SecondTableViewCell.swift */; };
+		2D6E5A181E225062007B38E8 /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E5A161E225062007B38E8 /* SecondTableViewCell.xib */; };
+		2D7240E91E1ECF0200CCFBFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7240E81E1ECF0200CCFBFD /* AppDelegate.swift */; };
+		2D7240F01E1ECF0200CCFBFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7240EF1E1ECF0200CCFBFD /* Assets.xcassets */; };
+		2D7240F31E1ECF0200CCFBFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7240F11E1ECF0200CCFBFD /* LaunchScreen.storyboard */; };
+		2D7240FE1E1ECF0200CCFBFD /* YtDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7240FD1E1ECF0200CCFBFD /* YtDownloaderTests.swift */; };
+		2D7241091E1ECF0200CCFBFD /* YtDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7241081E1ECF0200CCFBFD /* YtDownloaderUITests.swift */; };
+		2D7241171E1ECF4E00CCFBFD /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7241161E1ECF4E00CCFBFD /* UIColor+.swift */; };
+		2D7241191E1ECF6100CCFBFD /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7241181E1ECF6100CCFBFD /* UIFont+.swift */; };
+		2D72411C1E1ECF7E00CCFBFD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72411A1E1ECF7E00CCFBFD /* FirstViewController.swift */; };
+		2D72411D1E1ECF7E00CCFBFD /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72411B1E1ECF7E00CCFBFD /* FirstViewController.xib */; };
+		2D7241201E1ECF9100CCFBFD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72411E1E1ECF9100CCFBFD /* SecondViewController.swift */; };
+		2D7241211E1ECF9100CCFBFD /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72411F1E1ECF9100CCFBFD /* SecondViewController.xib */; };
+		2DCA28FF1E312D3400556FED /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */; };
+		2DFA029C1E1F79E900308B2F /* UTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA029A1E1F79E900308B2F /* UTextField.swift */; };
+		2DFA029D1E1F79E900308B2F /* UTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA029B1E1F79E900308B2F /* UTextField.xib */; };
+		4797B49A1FEE4EA5EC11027A /* Pods_YtDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1F16808D42584F1CB1655A /* Pods_YtDownloader.framework */; };
+		C69AC710089625544ECBAEFB /* Pods_YtDownloaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7AED408476B3A9DF10551B /* Pods_YtDownloaderTests.framework */; };
+		F8A59EF6C0008CC48F034D2D /* Pods_YtDownloaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724DA7C0EA7D47C6B1880544 /* Pods_YtDownloaderUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D7240FA1E1ECF0200CCFBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7240DD1E1ECF0200CCFBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D7240E41E1ECF0200CCFBFD;
+			remoteInfo = YtDownloader;
+		};
+		2D7241051E1ECF0200CCFBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7240DD1E1ECF0200CCFBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D7240E41E1ECF0200CCFBFD;
+			remoteInfo = YtDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		156253CDEAC5FA009D2D32F0 /* Pods-YtDownloaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloaderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloaderUITests/Pods-YtDownloaderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D1ED4C31E22C99500F825F6 /* YtDownloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YtDownloader.entitlements; sourceTree = "<group>"; };
+		2D6DB3A61E1ED737007EAD73 /* ConnectionCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheck.swift; sourceTree = "<group>"; };
+		2D6DB3AA1E1ED972007EAD73 /* VideoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
+		2D6DB3AC1E1EE2AB007EAD73 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2D6DB3AD1E1EE2AB007EAD73 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		2D6E5A121E224DAC007B38E8 /* MyVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVideo.swift; sourceTree = "<group>"; };
+		2D6E5A151E225062007B38E8 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		2D6E5A161E225062007B38E8 /* SecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
+		2D7240E51E1ECF0200CCFBFD /* YtDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YtDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7240E81E1ECF0200CCFBFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D7240EF1E1ECF0200CCFBFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D7240F21E1ECF0200CCFBFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D7240F41E1ECF0200CCFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7240F91E1ECF0200CCFBFD /* YtDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YtDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7240FD1E1ECF0200CCFBFD /* YtDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YtDownloaderTests.swift; sourceTree = "<group>"; };
+		2D7240FF1E1ECF0200CCFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7241041E1ECF0200CCFBFD /* YtDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YtDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7241081E1ECF0200CCFBFD /* YtDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YtDownloaderUITests.swift; sourceTree = "<group>"; };
+		2D72410A1E1ECF0200CCFBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7241161E1ECF4E00CCFBFD /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		2D7241181E1ECF6100CCFBFD /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		2D72411A1E1ECF7E00CCFBFD /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		2D72411B1E1ECF7E00CCFBFD /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		2D72411E1E1ECF9100CCFBFD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2D72411F1E1ECF9100CCFBFD /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		2DFA029A1E1F79E900308B2F /* UTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTextField.swift; sourceTree = "<group>"; };
+		2DFA029B1E1F79E900308B2F /* UTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UTextField.xib; sourceTree = "<group>"; };
+		2E7AED408476B3A9DF10551B /* Pods_YtDownloaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YtDownloaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1F16808D42584F1CB1655A /* Pods_YtDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YtDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C560500CD3B04A699763947 /* Pods-YtDownloaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloaderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloaderUITests/Pods-YtDownloaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F128A873ADFE4259306FE14 /* Pods-YtDownloaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloaderTests/Pods-YtDownloaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		724DA7C0EA7D47C6B1880544 /* Pods_YtDownloaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YtDownloaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08A48B48CC43866411AE258 /* Pods-YtDownloaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloaderTests/Pods-YtDownloaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7F4C628F141CA8BB6975E7D /* Pods-YtDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloader.release.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloader/Pods-YtDownloader.release.xcconfig"; sourceTree = "<group>"; };
+		EDA4FEAB9F08BC71EFC88B69 /* Pods-YtDownloader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YtDownloader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YtDownloader/Pods-YtDownloader.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D7240E21E1ECF0200CCFBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCA28FF1E312D3400556FED /* GoogleMobileAds.framework in Frameworks */,
+				4797B49A1FEE4EA5EC11027A /* Pods_YtDownloader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7240F61E1ECF0200CCFBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C69AC710089625544ECBAEFB /* Pods_YtDownloaderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7241011E1ECF0200CCFBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A59EF6C0008CC48F034D2D /* Pods_YtDownloaderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D6DB3A81E1ED79B007EAD73 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				2D72411B1E1ECF7E00CCFBFD /* FirstViewController.xib */,
+				2D72411A1E1ECF7E00CCFBFD /* FirstViewController.swift */,
+				2D6DB3B01E1EE2B0007EAD73 /* Cell */,
+			);
+			name = First;
+			sourceTree = "<group>";
+		};
+		2D6DB3A91E1ED7A2007EAD73 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				2D72411F1E1ECF9100CCFBFD /* SecondViewController.xib */,
+				2D72411E1E1ECF9100CCFBFD /* SecondViewController.swift */,
+				2D6E5A191E22511C007B38E8 /* Cell */,
+			);
+			name = Second;
+			sourceTree = "<group>";
+		};
+		2D6DB3B01E1EE2B0007EAD73 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D6DB3AC1E1EE2AB007EAD73 /* CustomTableViewCell.swift */,
+				2D6DB3AD1E1EE2AB007EAD73 /* CustomTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2D6E5A141E224DB0007B38E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E5A121E224DAC007B38E8 /* MyVideo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2D6E5A191E22511C007B38E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E5A151E225062007B38E8 /* SecondTableViewCell.swift */,
+				2D6E5A161E225062007B38E8 /* SecondTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2D7240DC1E1ECF0200CCFBFD = {
+			isa = PBXGroup;
+			children = (
+				2D6DB3AA1E1ED972007EAD73 /* VideoDetail.swift */,
+				2D7240E71E1ECF0200CCFBFD /* YtDownloader */,
+				2D7240FC1E1ECF0200CCFBFD /* YtDownloaderTests */,
+				2D7241071E1ECF0200CCFBFD /* YtDownloaderUITests */,
+				2D7240E61E1ECF0200CCFBFD /* Products */,
+				A46812A71358B46B11BF1EF9 /* Pods */,
+				E829B147E85C1A2C9495599C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D7240E61E1ECF0200CCFBFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D7240E51E1ECF0200CCFBFD /* YtDownloader.app */,
+				2D7240F91E1ECF0200CCFBFD /* YtDownloaderTests.xctest */,
+				2D7241041E1ECF0200CCFBFD /* YtDownloaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D7240E71E1ECF0200CCFBFD /* YtDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */,
+				2D1ED4C31E22C99500F825F6 /* YtDownloader.entitlements */,
+				2D7240E81E1ECF0200CCFBFD /* AppDelegate.swift */,
+				2D7241221E1ECF9700CCFBFD /* Controller */,
+				2D7241231E1ECFA000CCFBFD /* Extension */,
+				2DFA029E1E1F79EF00308B2F /* Classes */,
+				2D7240EF1E1ECF0200CCFBFD /* Assets.xcassets */,
+				2D7240F11E1ECF0200CCFBFD /* LaunchScreen.storyboard */,
+				2D6E5A141E224DB0007B38E8 /* Model */,
+				2D7240F41E1ECF0200CCFBFD /* Info.plist */,
+			);
+			path = YtDownloader;
+			sourceTree = "<group>";
+		};
+		2D7240FC1E1ECF0200CCFBFD /* YtDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D7240FD1E1ECF0200CCFBFD /* YtDownloaderTests.swift */,
+				2D7240FF1E1ECF0200CCFBFD /* Info.plist */,
+			);
+			path = YtDownloaderTests;
+			sourceTree = "<group>";
+		};
+		2D7241071E1ECF0200CCFBFD /* YtDownloaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2D7241081E1ECF0200CCFBFD /* YtDownloaderUITests.swift */,
+				2D72410A1E1ECF0200CCFBFD /* Info.plist */,
+			);
+			path = YtDownloaderUITests;
+			sourceTree = "<group>";
+		};
+		2D7241221E1ECF9700CCFBFD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D6DB3A81E1ED79B007EAD73 /* First */,
+				2D6DB3A91E1ED7A2007EAD73 /* Second */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2D7241231E1ECFA000CCFBFD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2D6DB3A61E1ED737007EAD73 /* ConnectionCheck.swift */,
+				2D7241161E1ECF4E00CCFBFD /* UIColor+.swift */,
+				2D7241181E1ECF6100CCFBFD /* UIFont+.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		2DFA029E1E1F79EF00308B2F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2DFA029A1E1F79E900308B2F /* UTextField.swift */,
+				2DFA029B1E1F79E900308B2F /* UTextField.xib */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A46812A71358B46B11BF1EF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDA4FEAB9F08BC71EFC88B69 /* Pods-YtDownloader.debug.xcconfig */,
+				E7F4C628F141CA8BB6975E7D /* Pods-YtDownloader.release.xcconfig */,
+				D08A48B48CC43866411AE258 /* Pods-YtDownloaderTests.debug.xcconfig */,
+				6F128A873ADFE4259306FE14 /* Pods-YtDownloaderTests.release.xcconfig */,
+				6C560500CD3B04A699763947 /* Pods-YtDownloaderUITests.debug.xcconfig */,
+				156253CDEAC5FA009D2D32F0 /* Pods-YtDownloaderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E829B147E85C1A2C9495599C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F1F16808D42584F1CB1655A /* Pods_YtDownloader.framework */,
+				2E7AED408476B3A9DF10551B /* Pods_YtDownloaderTests.framework */,
+				724DA7C0EA7D47C6B1880544 /* Pods_YtDownloaderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D7240E41E1ECF0200CCFBFD /* YtDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D72410D1E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloader" */;
+			buildPhases = (
+				EB82656E96A0C52E75107CB0 /* [CP] Check Pods Manifest.lock */,
+				2D7240E11E1ECF0200CCFBFD /* Sources */,
+				2D7240E21E1ECF0200CCFBFD /* Frameworks */,
+				2D7240E31E1ECF0200CCFBFD /* Resources */,
+				081A9A3FF683925237203B52 /* [CP] Embed Pods Frameworks */,
+				4226641903BC596A04A3902C /* [CP] Copy Pods Resources */,
+				2D1ED4C51E22CC8C00F825F6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YtDownloader;
+			productName = YtDownloader;
+			productReference = 2D7240E51E1ECF0200CCFBFD /* YtDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D7240F81E1ECF0200CCFBFD /* YtDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7241101E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloaderTests" */;
+			buildPhases = (
+				AB3D0FD1C9E73C95EF9235BC /* [CP] Check Pods Manifest.lock */,
+				2D7240F51E1ECF0200CCFBFD /* Sources */,
+				2D7240F61E1ECF0200CCFBFD /* Frameworks */,
+				2D7240F71E1ECF0200CCFBFD /* Resources */,
+				F1117A7E8B973BB1A1553CA0 /* [CP] Embed Pods Frameworks */,
+				616B3173F6D35E02A6A5ABFE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D7240FB1E1ECF0200CCFBFD /* PBXTargetDependency */,
+			);
+			name = YtDownloaderTests;
+			productName = YtDownloaderTests;
+			productReference = 2D7240F91E1ECF0200CCFBFD /* YtDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D7241031E1ECF0200CCFBFD /* YtDownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7241131E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloaderUITests" */;
+			buildPhases = (
+				5AC2250A188A1407ECE1929A /* [CP] Check Pods Manifest.lock */,
+				2D7241001E1ECF0200CCFBFD /* Sources */,
+				2D7241011E1ECF0200CCFBFD /* Frameworks */,
+				2D7241021E1ECF0200CCFBFD /* Resources */,
+				EADFC5B6F48F413C08FCB65B /* [CP] Embed Pods Frameworks */,
+				82FC5D77BCB955302F518163 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D7241061E1ECF0200CCFBFD /* PBXTargetDependency */,
+			);
+			name = YtDownloaderUITests;
+			productName = YtDownloaderUITests;
+			productReference = 2D7241041E1ECF0200CCFBFD /* YtDownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D7240DD1E1ECF0200CCFBFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Emir Beytekin";
+				TargetAttributes = {
+					2D7240E41E1ECF0200CCFBFD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3EPV7AGLM2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					2D7240F81E1ECF0200CCFBFD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D7240E41E1ECF0200CCFBFD;
+					};
+					2D7241031E1ECF0200CCFBFD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D7240E41E1ECF0200CCFBFD;
+					};
+				};
+			};
+			buildConfigurationList = 2D7240E01E1ECF0200CCFBFD /* Build configuration list for PBXProject "YtDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D7240DC1E1ECF0200CCFBFD;
+			productRefGroup = 2D7240E61E1ECF0200CCFBFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D7240E41E1ECF0200CCFBFD /* YtDownloader */,
+				2D7240F81E1ECF0200CCFBFD /* YtDownloaderTests */,
+				2D7241031E1ECF0200CCFBFD /* YtDownloaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D7240E31E1ECF0200CCFBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7241211E1ECF9100CCFBFD /* SecondViewController.xib in Resources */,
+				2D7240F31E1ECF0200CCFBFD /* LaunchScreen.storyboard in Resources */,
+				2D7240F01E1ECF0200CCFBFD /* Assets.xcassets in Resources */,
+				2D6DB3AF1E1EE2AB007EAD73 /* CustomTableViewCell.xib in Resources */,
+				2D6E5A181E225062007B38E8 /* SecondTableViewCell.xib in Resources */,
+				2D72411D1E1ECF7E00CCFBFD /* FirstViewController.xib in Resources */,
+				2DFA029D1E1F79E900308B2F /* UTextField.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7240F71E1ECF0200CCFBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7241021E1ECF0200CCFBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		081A9A3FF683925237203B52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloader/Pods-YtDownloader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D1ED4C51E22CC8C00F825F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 59279d8b586d37fd8b55a3179daeb125559e29c9 60b2e736757c5f804bf16f7f04e6eff1c2583d096b522b63e459ac40b5d5a63c";
+		};
+		4226641903BC596A04A3902C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloader/Pods-YtDownloader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC2250A188A1407ECE1929A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		616B3173F6D35E02A6A5ABFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloaderTests/Pods-YtDownloaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82FC5D77BCB955302F518163 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloaderUITests/Pods-YtDownloaderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB3D0FD1C9E73C95EF9235BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EADFC5B6F48F413C08FCB65B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloaderUITests/Pods-YtDownloaderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB82656E96A0C52E75107CB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1117A7E8B973BB1A1553CA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloaderTests/Pods-YtDownloaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D7240E11E1ECF0200CCFBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D6E5A171E225062007B38E8 /* SecondTableViewCell.swift in Sources */,
+				2D6DB3A71E1ED737007EAD73 /* ConnectionCheck.swift in Sources */,
+				2D7240E91E1ECF0200CCFBFD /* AppDelegate.swift in Sources */,
+				2D6DB3AE1E1EE2AB007EAD73 /* CustomTableViewCell.swift in Sources */,
+				2DFA029C1E1F79E900308B2F /* UTextField.swift in Sources */,
+				2D6DB3AB1E1ED972007EAD73 /* VideoDetail.swift in Sources */,
+				2D7241191E1ECF6100CCFBFD /* UIFont+.swift in Sources */,
+				2D72411C1E1ECF7E00CCFBFD /* FirstViewController.swift in Sources */,
+				2D7241201E1ECF9100CCFBFD /* SecondViewController.swift in Sources */,
+				2D7241171E1ECF4E00CCFBFD /* UIColor+.swift in Sources */,
+				2D6E5A131E224DAC007B38E8 /* MyVideo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7240F51E1ECF0200CCFBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7240FE1E1ECF0200CCFBFD /* YtDownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D7241001E1ECF0200CCFBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7241091E1ECF0200CCFBFD /* YtDownloaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D7240FB1E1ECF0200CCFBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D7240E41E1ECF0200CCFBFD /* YtDownloader */;
+			targetProxy = 2D7240FA1E1ECF0200CCFBFD /* PBXContainerItemProxy */;
+		};
+		2D7241061E1ECF0200CCFBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D7240E41E1ECF0200CCFBFD /* YtDownloader */;
+			targetProxy = 2D7241051E1ECF0200CCFBFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D7240F11E1ECF0200CCFBFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D7240F21E1ECF0200CCFBFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D72410B1E1ECF0200CCFBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D72410C1E1ECF0200CCFBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D72410E1E1ECF0200CCFBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDA4FEAB9F08BC71EFC88B69 /* Pods-YtDownloader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YtDownloader/YtDownloader.entitlements;
+				DEVELOPMENT_TEAM = 3EPV7AGLM2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YtDownloader",
+				);
+				INFOPLIST_FILE = YtDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.downloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2D72410F1E1ECF0200CCFBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F4C628F141CA8BB6975E7D /* Pods-YtDownloader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YtDownloader/YtDownloader.entitlements;
+				DEVELOPMENT_TEAM = 3EPV7AGLM2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YtDownloader",
+				);
+				INFOPLIST_FILE = YtDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.downloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2D7241111E1ECF0200CCFBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08A48B48CC43866411AE258 /* Pods-YtDownloaderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YtDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.tester.YtDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YtDownloader.app/YtDownloader";
+			};
+			name = Debug;
+		};
+		2D7241121E1ECF0200CCFBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F128A873ADFE4259306FE14 /* Pods-YtDownloaderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YtDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.tester.YtDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YtDownloader.app/YtDownloader";
+			};
+			name = Release;
+		};
+		2D7241141E1ECF0200CCFBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C560500CD3B04A699763947 /* Pods-YtDownloaderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YtDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.tester.YtDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YtDownloader;
+			};
+			name = Debug;
+		};
+		2D7241151E1ECF0200CCFBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 156253CDEAC5FA009D2D32F0 /* Pods-YtDownloaderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YtDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.beytekin.tester.YtDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = YtDownloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D7240E01E1ECF0200CCFBFD /* Build configuration list for PBXProject "YtDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D72410B1E1ECF0200CCFBFD /* Debug */,
+				2D72410C1E1ECF0200CCFBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D72410D1E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D72410E1E1ECF0200CCFBFD /* Debug */,
+				2D72410F1E1ECF0200CCFBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D7241101E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7241111E1ECF0200CCFBFD /* Debug */,
+				2D7241121E1ECF0200CCFBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D7241131E1ECF0200CCFBFD /* Build configuration list for PBXNativeTarget "YtDownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7241141E1ECF0200CCFBFD /* Debug */,
+				2D7241151E1ECF0200CCFBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D7240DD1E1ECF0200CCFBFD /* Project object */;
+}

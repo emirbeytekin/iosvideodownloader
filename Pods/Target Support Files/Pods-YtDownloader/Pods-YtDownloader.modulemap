@@ -1,0 +1,6 @@
+framework module Pods_YtDownloader {
+  umbrella header "Pods-YtDownloader-umbrella.h"
+
+  export *
+  module * { export * }
+}

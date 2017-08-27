@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="YtDownloader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKv-BX-9Co">
+                        <rect key="frame" x="277.5" y="11" width="39.5" height="22"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CN5-lO-wUi">
+                        <rect key="frame" x="8" y="4" width="259.5" height="35"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CN5-lO-wUi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7zk-9W-DWG"/>
+                    <constraint firstItem="zKv-BX-9Co" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="5" id="Afi-jf-Tfh"/>
+                    <constraint firstItem="CN5-lO-wUi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="IKj-cH-v52"/>
+                    <constraint firstItem="zKv-BX-9Co" firstAttribute="centerY" secondItem="CN5-lO-wUi" secondAttribute="centerY" id="Pfd-Tg-IXe"/>
+                    <constraint firstAttribute="bottom" secondItem="CN5-lO-wUi" secondAttribute="bottom" constant="4" id="lcP-cm-Eso"/>
+                    <constraint firstItem="zKv-BX-9Co" firstAttribute="leading" secondItem="CN5-lO-wUi" secondAttribute="trailing" constant="10" id="ziI-dY-coG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="zKv-BX-9Co" id="mpj-hf-e6m"/>
+                <outlet property="videoThumb" destination="CN5-lO-wUi" id="uB9-Aa-00D"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
