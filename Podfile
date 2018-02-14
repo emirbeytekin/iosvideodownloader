@@ -18,6 +18,7 @@ target 'YtDownloader' do
     pod 'OneSignal', '~> 2.1.6'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'SQLite.swift'
   target 'YtDownloaderTests' do
     inherit! :search_paths
     # Pods for testing

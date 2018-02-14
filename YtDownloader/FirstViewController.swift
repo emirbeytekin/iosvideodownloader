@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-
 import SwiftyJSON
 import NVActivityIndicatorView
 import Kingfisher
@@ -17,6 +16,7 @@ import GoogleMobileAds
 import MediaPlayer
 import AVKit
 import AVFoundation
+import SQLite
 
 class FirstViewController: UIViewController, NVActivityIndicatorViewable {
 
@@ -26,6 +26,8 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
     var videoTitle = ""
     var videoURL:String = ""
     var videoFileName: String = ""
+    var videoFilePath: String = ""
+    var videoExt = ""
     @IBOutlet weak var myLoader: UIProgressView!
     @IBOutlet weak var loadingTxt: UILabel!
     
@@ -39,17 +41,57 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
     var isAccess:Bool = false
     
     @IBOutlet weak var bannerView: GADBannerView!
+    
+    // hello db
+    
+    let myDownloadedFiles = Table("myDownloadedFiles")
+    let did = Expression<Int64>("id")
+    let dFileName = Expression<String?>("dFileName")
+    let dFilePath = Expression<String>("dFilePath")
+    var dbWay:String! = ""
 
+    
+    func dbCreate() { // veritabanını oluşturur
+        let part1DbPath = self.dbWay!
+        
+        var db: OpaquePointer? = nil
+        if sqlite3_open(part1DbPath, &db) == SQLITE_OK {
+            print("Successfully opened connection to database at \(part1DbPath)")
+            self.createTables()
+        } else {
+            print("Unable to open database. Verify that you created the directory described " +
+                "in the Getting Started section.")
+        }
+    }
+    
+    func createTables() { // tabloları
+        do {
+            let db = try Connection(self.dbWay!)
+            try db.run(myDownloadedFiles.create { t in
+                t.column(did, primaryKey: true)
+                t.column(dFileName)
+                t.column(dFilePath)
+            })
+            
+        } catch {
+            print("bir hata oluştu, amanın!")
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        self.dbWay = paths[0] + "/db.sqlite3"
+        self.dbCreate()
+        self.lastRecords()
         self.saveLabel.text = "is Valid URL!"
         self.firstCheck()
         self.makeStyle()
         self.title = "Download File"
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FirstViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
         myLoader.transform = myLoader.transform.scaledBy(x: 1, y: 30)
         
     }
@@ -58,9 +100,6 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-  
-    
     
     func makeStyle() {
         self.urlText.textField.text = ""
@@ -218,39 +257,9 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
                     let x = resp["data"]["name"].string
                     let y = resp["data"]["thumb"].string
                     self.videoURL = resp["data"]["fileUrl"].string!
+                    self.videoExt = resp["data"]["ext"].string ?? "mp4"
                     
-                   
-//                    let fileURL = NSURL(string: self.videoURL)!
-//                    
-//                    
-//                    let player = AVPlayer(url: fileURL as URL)
-//                    
-//                    let playerController = AVPlayerViewController()
-//                    
-//                    playerController.player = player
-//                    
-//                    self.present(playerController, animated: true) {
-//                        
-//                        player.play()
-//                    }
-                    
-                    // player test
-//                    let fileURL = NSURL(string: self.videoURL)!
-//                    
-//                    let player = AVPlayer(url: fileURL as URL)
-//                    let playerController = AVPlayerViewController()
-//                    
-//                    playerController.player = player
-//                    self.addChildViewController(playerController)
-//                    self.view.addSubview(playerController.view)
-//                    
-//                    playerController.view.frame = self.view.frame
-//                    
-//                    player.play()
-//                    
-                    
-                    
-                    self.videoFileName = "\(x!).mp4"
+                    self.videoFileName = "yallah.mp4"//"\(x!).mp4"
                     
                     if (x != nil) {
                         address.baslik = x
@@ -295,6 +304,19 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    func insertRecord(fName:String? = "", fPath:String = "") {
+        print(fPath)
+        
+        do {
+            let db = try Connection(self.dbWay!)
+            let insert = myDownloadedFiles.insert(dFileName <- fName!, dFilePath <- fPath)
+            let rowid = try db.run(insert)
+            print("kayıt id \(rowid)")
+        } catch {
+            print("kayıt eklenemedi")
+        }
+    }
+    
 
     @IBAction func downAction2(_ sender: Any) {
         
@@ -319,13 +341,16 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
         
         let alertView = SCLAlertView()
 //
-//        let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
         
         let destination: (URL, HTTPURLResponse) -> (URL, DownloadRequest.DownloadOptions) = {
             (temporaryURL, response) in
             
             if let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, let suggestedFilename = response.suggestedFilename {
-                let filePath = directoryURL.appendingPathComponent("\(suggestedFilename)\(self.randomInt(min: 1, max: 9999)).mp4")
+                
+                let filePath = directoryURL.appendingPathComponent("\(self.randomInt(min: 1, max: 9999)).\(self.videoExt)")
+                
+                self.videoFilePath = filePath.path
+                self.insertRecord(fName: self.videoTitle, fPath: self.videoFilePath)
                 
                 return (filePath, [.removePreviousFile])
             }
@@ -355,9 +380,9 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
                     let firstName: String = fullNameArr[1]
                     
                     if (Float(progress.fractionCompleted) != 1.0) {
-                    var index1 = firstName.index(firstName.startIndex, offsetBy: 2)
+                        let index1 = firstName.index(firstName.startIndex, offsetBy: 2)
                     
-                    var substring1 = firstName.substring(to: index1)
+                        let substring1 = firstName.substring(to: index1)
                     
                     self.loadingTxt.text = "% \(substring1)"
                     }
@@ -372,7 +397,7 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
                     
                 }).response(completionHandler: { (DefaultDownloadResponse) in
                     //here you able to access the DefaultDownloadResponse
-                    print(DefaultDownloadResponse)
+//                    print(DefaultDownloadResponse)
                     //result closure
                 })
 
@@ -383,6 +408,22 @@ class FirstViewController: UIViewController, NVActivityIndicatorViewable {
     func getBanner() {
         
         print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        bannerView.adUnitID = "ca-app-pub-5742871402454995/8567220244"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+    }
+    
+    func lastRecords() {
+        do {
+            let db = try Connection(Utils.getDbWay())
+            let sqlCommand = "SELECT * FROM myDownloadedFiles"
+            for row in try db.prepare(sqlCommand) {
+                print("id: \(row[0]), name: \(row[1]), filePath: \(row[2])")
+            }
+        } catch {
+            
+        }
         
     }
 

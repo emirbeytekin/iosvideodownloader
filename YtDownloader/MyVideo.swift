@@ -11,6 +11,7 @@ import UIKit
 
 class MyVideo: NSObject {
     
+    var videoId: Int64?
     var videoTitle: String?
     var videoURL: String?
     

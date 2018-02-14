@@ -14,6 +14,7 @@ import AVKit
 import AVFoundation
 import MediaPlayer
 import AssetsLibrary
+import SQLite
 
 class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
@@ -22,6 +23,8 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     var objects = [MyVideo]()
     
     var refreshControl = UIRefreshControl()
+    
+    let myDownloadedFiles = Table("myDownloadedFiles")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,51 +57,23 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     func list() {
         
         objects.removeAll()
-        
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        
         do {
-            
-            let directoryContents = try FileManager.default.contentsOfDirectory( at: documentsUrl, includingPropertiesForKeys: nil, options: [])
-            
-            print(directoryContents)
-//            let mp3Files = directoryContents.filter{ $0.pathExtension == "mp4" }
-//            print("mp4 urls:",mp3Files)
-            var i = 0;
-            
-            for datas in directoryContents {
-                i += 1;
-                let list = MyVideo()
-                list.videoTitle = "\(i) - \(datas)"
-                list.videoURL = "\(datas)"
-                self.objects.append(list)
+            let db = try Connection(Utils.getDbWay())
+            let sqlCommand = "SELECT * FROM myDownloadedFiles"
+            for row in try db.prepare(sqlCommand) {
+                print("id: \(row[0]), name: \(row[1]), filePath: \(row[2])")
                 
+                let asd = MyVideo()
+                asd.videoId = row[0]! as? Int64
+                asd.videoTitle = row[1]! as? String
+                asd.videoURL = row[2]! as! String
+                self.objects.append(asd)
             }
-            
-            if self.refreshControl.isRefreshing
-            {
-                self.refreshControl.endRefreshing()
-            }
-
-            
             self.tableView.reloadData()
-
+        } catch {
             
-        } catch let error as NSError {
-            print(error.localizedDescription)
         }
-        
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -144,9 +119,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! SecondTableViewCell!
         
         let a = objects[indexPath.row] as MyVideo
-        
-//        cell?.videoNameLabel.text = a.videoTitle
-        cell?.videoNameLabel.text = " \(indexPath.row + 1) - My Video"
+        cell?.videoNameLabel.text = a.videoTitle
 
         
         self.tableView?.tableFooterView = UIView(frame: CGRect.zero)
@@ -162,12 +135,12 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         print(a.videoURL)
         
-        let string = a.videoURL?.replacingOccurrences(of: "file:///private", with: "")
+        let string = a.videoURL?.replacingOccurrences(of: "file:///", with: "")
         
         let videoDataPath = string
         
         let filePathURL = URL(fileURLWithPath: videoDataPath!)
-
+        
         let alertView = SCLAlertView()
         let alertView2 = SCLAlertView()
         
@@ -194,6 +167,20 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         alertView.addButton("Delete") {
             
+            
+            do {
+                let objId = self.objects[indexPath.row]
+                let db = try Connection(Utils.getDbWay())
+                let alice = self.myDownloadedFiles.filter(a.videoId! == rowid)
+                try db.run(alice.delete())
+                
+                self.objects.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .middle)
+                
+            } catch {
+                
+            }
+            
             do {
                 let fileManager = FileManager.default
                 
@@ -201,7 +188,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
                 if fileManager.fileExists(atPath: string!) {
                     // Delete file
                     try fileManager.removeItem(atPath: string!)
-                    self.list()
+//                    self.list()
                 } else {
                     print("File does not exist")
                 }
@@ -214,9 +201,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
             
         }        
 
-        alertView.showSuccess("Choose", subTitle: "What you want this file?", closeButtonTitle: "Cancel")
-        
-        
+        alertView.showSuccess("Choose", subTitle: "What you want this file?", closeButtonTitle: "Cancel")        
         
     }
     

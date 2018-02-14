@@ -36,39 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        Fabric.with([Crashlytics.self])
-        
-        OneSignal.initWithLaunchOptions(launchOptions, appId: "86dc1b48-5f85-4fd8-815a-020bcd213dae") { (result) in
-            
-            // This block gets called when the user reacts to a notification received
-            
-            let payload = result?.notification.payload
-            let messageTitle = "OneSignal Example"
-            var fullMessage = payload?.title
-            
-            //Try to fetch the action selected
-            if let additionalData = payload?.additionalData, let actionSelected = additionalData["actionSelected"] as? String {
-                fullMessage =  fullMessage! + "\nPressed ButtonId:\(actionSelected)"
-            }
-            
-//            let alertView = UIAlertView(title: messageTitle, message: fullMessage, delegate: nil, cancelButtonTitle: "Close")
-//            alertView.show()
-        }
-        
-        //setting up view controllers and navigation controllers
-        
-        if #available(iOS 10, *) {
-            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
-            application.registerForRemoteNotifications()
-        }
-            // iOS 9 support
-        else if #available(iOS 9, *) {
-            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
-            UIApplication.shared.registerForRemoteNotifications()
-        }
-        
-        
+                
         firstVC = FirstViewController(nibName: "FirstViewController", bundle: nil)
         secondsVC = SecondViewController(nibName: "SecondViewController", bundle: nil)
         

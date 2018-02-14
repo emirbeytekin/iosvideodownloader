@@ -26,6 +26,9 @@
 		2D7241201E1ECF9100CCFBFD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D72411E1E1ECF9100CCFBFD /* SecondViewController.swift */; };
 		2D7241211E1ECF9100CCFBFD /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D72411F1E1ECF9100CCFBFD /* SecondViewController.xib */; };
 		2DCA28FF1E312D3400556FED /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */; };
+		2DD8201E1FDFCB0B000A1615 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8201C1FDFCB0B000A1615 /* libsqlite3.tbd */; };
+		2DD8201F1FDFCB0B000A1615 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD8201D1FDFCB0B000A1615 /* libsqlite3.0.tbd */; };
+		2DD820211FDFF05C000A1615 /* Statics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD820201FDFF05C000A1615 /* Statics.swift */; };
 		2DFA029C1E1F79E900308B2F /* UTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA029A1E1F79E900308B2F /* UTextField.swift */; };
 		2DFA029D1E1F79E900308B2F /* UTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA029B1E1F79E900308B2F /* UTextField.xib */; };
 		4797B49A1FEE4EA5EC11027A /* Pods_YtDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1F16808D42584F1CB1655A /* Pods_YtDownloader.framework */; };
@@ -78,6 +81,9 @@
 		2D72411E1E1ECF9100CCFBFD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2D72411F1E1ECF9100CCFBFD /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		2DD8201C1FDFCB0B000A1615 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2DD8201D1FDFCB0B000A1615 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		2DD820201FDFF05C000A1615 /* Statics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statics.swift; sourceTree = "<group>"; };
 		2DFA029A1E1F79E900308B2F /* UTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTextField.swift; sourceTree = "<group>"; };
 		2DFA029B1E1F79E900308B2F /* UTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UTextField.xib; sourceTree = "<group>"; };
 		2E7AED408476B3A9DF10551B /* Pods_YtDownloaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YtDownloaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD8201E1FDFCB0B000A1615 /* libsqlite3.tbd in Frameworks */,
+				2DD8201F1FDFCB0B000A1615 /* libsqlite3.0.tbd in Frameworks */,
 				2DCA28FF1E312D3400556FED /* GoogleMobileAds.framework in Frameworks */,
 				4797B49A1FEE4EA5EC11027A /* Pods_YtDownloader.framework in Frameworks */,
 			);
@@ -194,6 +202,7 @@
 				2DCA28FE1E312D3400556FED /* GoogleMobileAds.framework */,
 				2D1ED4C31E22C99500F825F6 /* YtDownloader.entitlements */,
 				2D7240E81E1ECF0200CCFBFD /* AppDelegate.swift */,
+				2DD820201FDFF05C000A1615 /* Statics.swift */,
 				2D7241221E1ECF9700CCFBFD /* Controller */,
 				2D7241231E1ECFA000CCFBFD /* Extension */,
 				2DFA029E1E1F79EF00308B2F /* Classes */,
@@ -267,6 +276,8 @@
 		E829B147E85C1A2C9495599C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DD8201D1FDFCB0B000A1615 /* libsqlite3.0.tbd */,
+				2DD8201C1FDFCB0B000A1615 /* libsqlite3.tbd */,
 				4F1F16808D42584F1CB1655A /* Pods_YtDownloader.framework */,
 				2E7AED408476B3A9DF10551B /* Pods_YtDownloaderTests.framework */,
 				724DA7C0EA7D47C6B1880544 /* Pods_YtDownloaderUITests.framework */,
@@ -433,9 +444,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YtDownloader/Pods-YtDownloader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -476,13 +506,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YtDownloaderUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		616B3173F6D35E02A6A5ABFE /* [CP] Copy Pods Resources */ = {
@@ -521,13 +554,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YtDownloaderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EADFC5B6F48F413C08FCB65B /* [CP] Embed Pods Frameworks */ = {
@@ -551,13 +587,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YtDownloader-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1117A7E8B973BB1A1553CA0 /* [CP] Embed Pods Frameworks */ = {
@@ -589,6 +628,7 @@
 				2DFA029C1E1F79E900308B2F /* UTextField.swift in Sources */,
 				2D6DB3AB1E1ED972007EAD73 /* VideoDetail.swift in Sources */,
 				2D7241191E1ECF6100CCFBFD /* UIFont+.swift in Sources */,
+				2DD820211FDFF05C000A1615 /* Statics.swift in Sources */,
 				2D72411C1E1ECF7E00CCFBFD /* FirstViewController.swift in Sources */,
 				2D7241201E1ECF9100CCFBFD /* SecondViewController.swift in Sources */,
 				2D7241171E1ECF4E00CCFBFD /* UIColor+.swift in Sources */,

@@ -2,8 +2,8 @@ import Foundation
 
 import SystemConfiguration
 
-let BASE_URL = "http://198.199.127.6/emir/yt"
-let SM_URL = "http://198.199.127.6/emir/"
+let BASE_URL = "http://82.196.15.99/emir/yt"
+let SM_URL = "http://82.196.15.99/emir/"
 
 open class Reachability {
     
